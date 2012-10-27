@@ -41,16 +41,16 @@ Do **NOT** edit the default RubyCheckOnSave settings. Your changes will be lost 
 
 SublimeLinter supports per-project settings. This is useful if you work with several projects that requires different ruby interpreters. To edit your project settings, select the menu item `Project->Edit Project`. If there is no `settings` object at the top level, add one and then add the `ruby_check_on_save_cmd` setting, like this:
 
-  {
-    "folders":
-    [
-      {
-        "path": "/Users/edgar/sandboxes/repo"
-      }
-    ],
-    "settings":
-    {
-      "ruby_check_on_save_cmd": "/Users/edgar/.rvm/rubies/ruby-1.9.3-p194/bin/ruby"
-    }
-  }
 
+    {
+        "folders":
+          [
+              {
+                  "path": "/Users/edgar/sandboxes/repo"
+              }
+          ],
+          "settings":
+          {
+              "ruby_check_on_save_cmd": "/Users/edgar/.rvm/rubies/ruby-1.9.3-p194/bin/ruby"
+          }
+    }
