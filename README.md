@@ -1,5 +1,5 @@
 RubyCheckOnSave Sublime Text 2 Plugin
-=========++==========================
+=====================================
 
 This simple plugin checks the syntax of ruby files when they're saved.
 
