@@ -16,9 +16,8 @@ class RubyCheckOnSaveCommand(sublime_plugin.TextCommand):
         cmd_output = child_process.communicate()[0]
 
         if child_process.returncode != 0:
-            first_line, desc = cmd_output.split('\n', 1)
-            desc = desc.split('\n', 1)[0]
+            first_line = sorted(cmd_output.split('\n'), key=lambda line: "error" not in line and "mismatch" not in line)[0]
             _, line, error = first_line.split(':', 2)
-            err_message = "Ruby syntax error at %(line)s line\n\n%(desc)s\n\n%(error)s" % { "line": line, "desc": desc, "error": error }
+            err_message = "Ruby syntax error at %(line)s line: %(error)s\n\n%(output)s" % { "line": line, "error": error, "output": cmd_output.replace(view.file_name() + ":", '') }
             sublime.error_message(err_message)
             view.window().run_command("goto_line", {"line": line} )
