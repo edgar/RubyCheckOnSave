@@ -7,7 +7,7 @@ Usage
 -----
 
 If you made a syntax mistake in your ruby file it will raise a popup window on save.
-![error_popup](https://f.cloud.github.com/assets/484327/1950209/59180fca-813a-11e3-91c6-93db62faf96e.png)
+![error_popup](https://raw.github.com/edgar/RubyCheckOnSave/screenshots/screenshot.png)
 
 Installation
 ------------
